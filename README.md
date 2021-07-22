@@ -1,8 +1,8 @@
 # Assistants-Pi
-Simultaneously run Google Assistant and Alexa on Raspberry Pi
+# Simultaneously run Google Assistant and Alexa on Raspberry Pi
 Before Starting the setup
 
-For Google Assistant
+# For Google Assistant
 
 Create a project in the Google's Action Console.
 Download credentials--->.json file (refer to this doc for creating credentials https://developers.google.com/assistant/sdk/develop/python/config-dev-project-and-account)
@@ -13,13 +13,13 @@ https://github.com/alexa/avs-device-sdk/wiki/Create-Security-Profile
 
 Download the "config.json" file.
 
-Setup Amazon Alexa, Google Assistant or Both
+# Setup Amazon Alexa, Google Assistant or Both
 Clone the git using:https://github.com/vamshiyekbote/Assistants-Pi.git
 DO NOT RENAME THE CREDENTIALS FILEs
 Place the Alexa config.json in file in the /home/pi/Assistants-Pi/Alexa directory.
 Place the Google client_secret.....json file in the /home/pi/ directory.
 
-Make the installers executable using:
+# Make the installers executable using:
 sudo chmod +x /home/pi/Assistants-Pi/scripts/prep-system.sh    
 sudo chmod +x /home/pi/Assistants-Pi/scripts/audio-test.sh   
 sudo chmod +x /home/pi/Assistants-Pi/scripts/installer.sh  
@@ -42,7 +42,7 @@ sudo reboot
 Install the assistant/assistants using the following. This is an interactive script, so just follow the onscreen instructions:
 sudo /home/pi/Assistants-Pi/scripts/installer.sh  
 
-If you get a fatal error: curl/curl.h: No such file or directory that means you need to install curl. In your Terminal enter:
+# If you get a fatal error: curl/curl.h: No such file or directory that means you need to install curl. In your Terminal enter:
 
 "sudo apt-get install libcurl4-openssl-dev"
 "sudo apt-get install libcurl4-gnutls-dev"
