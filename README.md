@@ -69,7 +69,7 @@ If you have issues with the Assistants strating on boot, you may have to setup P
 
 I have also faced a similar issue this week. As we are using Raspberry Pi 3 Model, it has only 1 gb of ram memory and some of the object building processes (like [ 93%] Building CXX object Application Utilities/DefaultClient/src/CMakeFiles/DefaultClient.dir/DefaultClient.cpp.o) from recent avs-device-sdk version requires more memory for object building task.
 
-To solve this issue I increased my swap memory size from 100 mb (default) to 512 mb. After this only, my AVS Build process completed. It is not much efficient, as it takes a lot of time but it is better than a terminated build process.
+To solve this issue I increased my swap memory size from 100 mb (default) to 1024 mb. After this only, my AVS Build process completed. It is not much efficient, as it takes a lot of time but it is better than a terminated build process.
 
 To increase the swap memory:
 
@@ -92,7 +92,7 @@ Press CTRL+O then Enter Key then CTRL+X
 Then run
 3) sudo dphys-swapfile swapon
 
-Now, reboot or shutdown and start your raspberry pi again and you can see your swap memory size will be increased to 512 mb
+Now, reboot or shutdown and start your raspberry pi again and you can see your swap memory size will be increased to 1024 mb
 (You can check this by running command "free -h" before and after changing the swapsize)
 
 Now, you can run your BUILD AVS process without any error or termination.
