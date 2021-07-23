@@ -18,45 +18,45 @@ Place the Alexa config.json in file in the /home/pi/Assistants-Pi/Alexa director
 Place the Google client_secret.....json file in the /home/pi/ directory.
 
 # Make the installers executable using:
-sudo chmod +x /home/pi/Assistants-Pi/scripts/prep-system.sh    
-sudo chmod +x /home/pi/Assistants-Pi/scripts/audio-test.sh   
-sudo chmod +x /home/pi/Assistants-Pi/scripts/installer.sh  
+# sudo chmod +x /home/pi/Assistants-Pi/scripts/prep-system.sh    
+# sudo chmod +x /home/pi/Assistants-Pi/scripts/audio-test.sh   
+# sudo chmod +x /home/pi/Assistants-Pi/scripts/installer.sh  
 Prepare the system for installing assistants by updating, upgrading and setting up audio using:
-sudo /home/pi/Assistants-Pi/scripts/prep-system.sh
+# sudo /home/pi/Assistants-Pi/scripts/prep-system.sh
 Restart the Pi using:
-sudo reboot
+# sudo reboot
 Make sure that contents of asoundrc match the contents of asound.conf
 Open a terminal and type:
-sudo nano /etc/asound.conf
+# sudo nano /etc/asound.conf
 Open a second terminal and type:
 
-sudo nano ~/.asoundrc
+# sudo nano ~/.asoundrc
 If the contents of .asoundrc are not same as asound.conf, copy the contents from asound.conf to .asoundrc, save using ctrl+x and y
 
 Bonus Script - Test the audio setup using the following code (optional). Dont panic if the test does not go through successfully, proceed with the installation:
-sudo /home/pi/Assistants-Pi/scripts/audio-test.sh  
+# sudo /home/pi/Assistants-Pi/scripts/audio-test.sh  
 Restart the Pi using:
-sudo reboot
+# sudo reboot
 Install the assistant/assistants using the following. This is an interactive script, so just follow the onscreen instructions:
-sudo /home/pi/Assistants-Pi/scripts/installer.sh  
+# sudo /home/pi/Assistants-Pi/scripts/installer.sh  
 
 # If you get a fatal error: curl/curl.h: No such file or directory that means you need to install curl. In your Terminal enter:
 
-"sudo apt-get install libcurl4-openssl-dev"
-"sudo apt-get install libcurl4-gnutls-dev"
+# "sudo apt-get install libcurl4-openssl-dev"
+# "sudo apt-get install libcurl4-gnutls-dev"
 
 After verification of the assistants, to make them auto start on boot:
 Open a terminal and run the following commands:
 
-sudo chmod +x /home/pi/Assistants-Pi/scripts/service-installer.sh
-sudo /home/pi/Assistants-Pi/scripts/service-installer.sh  
+# sudo chmod +x /home/pi/Assistants-Pi/scripts/service-installer.sh
+# sudo /home/pi/Assistants-Pi/scripts/service-installer.sh  
 For Alexa:
-sudo systemctl enable alexa.service  
+# sudo systemctl enable alexa.service  
 
 For Google Assistant:
-sudo systemctl enable google-assistant.service  
+# sudo systemctl enable google-assistant.service  
 Authorize Alexa before restarting
-sudo /home/pi/Assistants-Pi/Alexa/startsample.sh  
+# sudo /home/pi/Assistants-Pi/Alexa/startsample.sh  
 Manually Start The Alexa Assistant
 Double click start.sh file in the /home/pi/Assistants-Pi/Alexa folder and choose to "Execute in the Terminal".
 
@@ -75,8 +75,8 @@ To increase the swap memory:
 
 Open the terminal, and run
 
-sudo dphys-swapfile swapoff
-sudo nano /etc/dphys-swapfile
+# sudo dphys-swapfile swapoff
+# sudo nano /etc/dphys-swapfile
 After the second command, dphys-swapfile file will open and you will need to modify
 
 CONF_SWAPSIZE=100
@@ -90,7 +90,7 @@ Press CTRL+O then Enter Key then CTRL+X
 (To save the changes made in the file)
 
 Then run
-3) sudo dphys-swapfile swapon
+# sudo dphys-swapfile swapon
 
 Now, reboot or shutdown and start your raspberry pi again and you can see your swap memory size will be increased to 1024 mb
 (You can check this by running command "free -h" before and after changing the swapsize)
